@@ -3,7 +3,7 @@ name: Build
 on: [push]
 
 env:
-  TOOLCHAIN: clang-14
+  TOOLCHAIN: samsung
   INSTALLER: yes
 
 jobs:

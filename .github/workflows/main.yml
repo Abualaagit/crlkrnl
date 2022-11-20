@@ -3,7 +3,7 @@ name: Build
 on: [push]
 
 env:
-  TOOLCHAIN: google
+  TOOLCHAIN: arter97
   INSTALLER: yes
 
 jobs:
@@ -55,7 +55,7 @@ jobs:
           set -e -o pipefail
           ./cruelbuild config                    \
                        model=${{ matrix.model }} \
-                       name="Osama_S10_5G_G977B/N_google_FUH3_A11"         \
+                       name="Osama_S10_5G_G977B/N_arter97_FUH3_A11"         \
                        toolchain=$TOOLCHAIN      \
                        +magisk                   \
                        +nohardening              \

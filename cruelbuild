@@ -39,6 +39,23 @@ toolchain = {
         'CLANG_TRIPLE': 'toolchain/clang/host/linux-x86/clang-r349610-jopp/bin/aarch64-linux-gnu-',
         'CC': 'toolchain/clang/host/linux-x86/clang-r349610-jopp/bin/clang'
     },
+    'clang-11': {
+        'CROSS_COMPILE': 'toolchain/samsung/gcc-cfp/gcc-cfp-jopp-only/aarch64-linux-android-4.9/bin/aarch64-linux-android-',
+        'CLANG_TRIPLE': 'toolchain/clang-11/clang/host/linux-x86/clang-r399163b/bin/aarch64-linux-gnu-',
+        'CC': 'toolchain/clang-11/host/linux-x86/clang-r399163b/bin/clang'
+    },
+    'clang-12': {
+        'CROSS_COMPILE': 'toolchain/samsung/gcc-cfp/gcc-cfp-jopp-only/aarch64-linux-android-4.9/bin/aarch64-linux-android-',
+        'CLANG_TRIPLE': 'toolchain/clang-12/clang/host/linux-x86/clang-r416183c/bin/aarch64-linux-gnu-',
+        'CC': 'toolchain/clang-12/host/linux-x86/clang-r416183c/bin/clang'  #12.06
+    },
+    'clang-14': {
+        'CROSS_COMPILE': 'toolchain/samsung/gcc-cfp/gcc-cfp-jopp-only/aarch64-linux-android-4.9/bin/aarch64-linux-android-',
+        #'CLANG_TRIPLE': 'toolchain/clang-14/clang/host/linux-x86/clang-r437112/bin/aarch64-linux-gnu-', # 14.0.0
+        #'CC': 'toolchain/clang-14/host/linux-x86/clang-r437112/bin/clang'  #14.0.0
+        'CLANG_TRIPLE': 'toolchain/clang-14/clang/host/linux-x86/clang-r437112b/bin/aarch64-linux-gnu-', # 14.0.1
+        'CC': 'toolchain/clang-14/host/linux-x86/clang-r437112b/bin/clang'  #14.0.1
+    },
     'google': {
         'CROSS_COMPILE': 'toolchain/aarch64-linux-android-4.9/bin/aarch64-linux-android-',
         'CLANG_TRIPLE': 'toolchain/llvm/bin/aarch64-linux-android-',

@@ -3,16 +3,16 @@ name: Build
 on: [push]
 
 env:
-  TOOLCHAIN: default
+  TOOLCHAIN: cruel
   INSTALLER: yes
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        model: [ "G970F,G973F,G975F", "N970F,N975F" ]
+        model: [ "G977B, G977N"]
 
     steps:
     - uses: actions/checkout@v2
@@ -50,7 +50,7 @@ jobs:
         set -e -o pipefail
         ./cruelbuild config                    \
                      model=${{ matrix.model }} \
-                     name="Cruel-V3.10"         \
+                     name="OSAMA,KERNEL,Cruel-Q_LATEST"         \
                      toolchain=$TOOLCHAIN      \
                      +magisk                   \
                      +nohardening              \

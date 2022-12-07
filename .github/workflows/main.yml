@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        model: [ "G977B, G977N"]
+        model: [ "G977B"]
 
     steps:
     - uses: actions/checkout@v2

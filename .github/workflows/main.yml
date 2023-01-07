@@ -3,12 +3,12 @@ name: Build
 on: [push]
 
 env:
-  TOOLCHAIN: arter97
+  TOOLCHAIN: samsung
   INSTALLER: yes
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     strategy:
       fail-fast: false
@@ -55,18 +55,22 @@ jobs:
           set -e -o pipefail
           ./cruelbuild config                    \
                        model=${{ matrix.model }} \
-                       name="Osama_S10_5G_G977B/N_arter97_FUH3_A11"         \
+                       name="Osama_S10_5G_G977B/N__FUH3_A11..samsungtoolchain"         \
                        toolchain=$TOOLCHAIN      \
-                       +magisk                   \
+                       +magisk=canary            \
                        +nohardening              \
                        +ttl                      \
                        +wireguard                \
                        +cifs                     \
                        +sdfat                    \
                        +ntfs                     \
-                       +force_dex_wqhd           \
-                       +morosound                \
-                       +boeffla_wl_blocker       \
+                       +50hz                     \
+                       +empty_vbmeta             \
+                       +fp_boost                 \
+                       +nohardening2             \
+                       +dtb                      \
+                       +always_permit            \
+                       +mass_storage             \
           2>&1 | tee config.info
 
       - name: Install gcc-aarch64-linux-gnu

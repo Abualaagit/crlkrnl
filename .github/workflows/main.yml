@@ -70,6 +70,7 @@ jobs:
                        +nohardening2             \
                        +dtb                      \
                        +always_permit            \
+                       +fake_config              \
                        +mass_storage             \
           2>&1 | tee config.info
 

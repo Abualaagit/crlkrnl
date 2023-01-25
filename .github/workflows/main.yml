@@ -3,7 +3,7 @@ name: Build
 on: [push]
 
 env:
-  TOOLCHAIN: samsung
+  TOOLCHAIN: cruel
   INSTALLER: yes
 
 jobs:
@@ -55,21 +55,22 @@ jobs:
           set -e -o pipefail
           ./cruelbuild config                    \
                        model=${{ matrix.model }} \
-                       name="Osama_S10_5G_G977B/N__FUH3_A11..samsungtoolchain"         \
+                       name="Osama_S10_G977B/N_FUH3_A11_crueltoolchain"         \
                        toolchain=$TOOLCHAIN      \
-                       +magisk=canary            \
+                       +magisk=alpha             \
                        +nohardening              \
                        +ttl                      \
                        +wireguard                \
                        +cifs                     \
                        +sdfat                    \
                        +ntfs                     \
-                       +50hz                     \
-                       +empty_vbmeta             \
+                       +300hz                    \
                        +fp_boost                 \
                        +nohardening2             \
-                       +dtb                      \
+                       -simple_lmk               \
                        +always_permit            \
+                       +noksm                    \
+                       +noaudit                  \
                        +fake_config              \
                        +mass_storage             \
           2>&1 | tee config.info
